@@ -4,12 +4,7 @@ import UIKit
 
 //MARK:-- TASK 1
 func evenNumber (number: Int) {
-    if (number % 2) == 0 {
-        print ("\(number) is even number")
-    }
-    else {
-        print ("\(number) is odd number")
-    }
+    print("\(number) is \(number % 2 == 0 ? "even":"odd") number")
 }
 evenNumber(number: 4)
 evenNumber(number: 5)
