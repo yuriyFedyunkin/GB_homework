@@ -42,3 +42,59 @@ for value in array {
     }
 }
 print (array)
+
+//MARK:-- TASK 5
+
+func fibArray (fibNumber: Int) -> Array<Decimal> {
+    var arrayOfFib = [Decimal]()
+
+    func fibbonachi (_ n: Int) -> Decimal {
+        if (n < 3) {
+            return 1
+        }
+        else {
+            var x1: Decimal = 1, x2: Decimal = 1, x: Decimal
+            for _ in 3...n {
+                x = x1 + x2
+                x1 = x2
+                x2 = x
+            }
+            return x2
+        }
+    }
+    for i in 1...fibNumber {
+        arrayOfFib.append(fibbonachi(i))
+    }
+    return arrayOfFib
+}
+//print (fibArray(fibNumber: 100))
+
+
+//MARK:-- TASK 6
+
+func prime (number: Int) -> Bool {
+    if number < 2 {
+        return false
+    }
+    for i in 2..<number {
+        if (number % i) == 0 {
+            return false
+        }
+    }
+    return true
+}
+
+func primeArray() -> [Int] {
+    var result = [Int]()
+    var p = 2
+    
+    while result.count < 100 {
+        if prime(number: p) {
+              result.append(p)
+        }
+         p += 1
+    }
+    return result
+}
+
+primeArray()
