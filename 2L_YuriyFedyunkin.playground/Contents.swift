@@ -40,30 +40,26 @@ print (array)
 
 //MARK:-- TASK 5
 
-func fibArray (fibNumber: Int) -> Array<Decimal> {
-    var arrayOfFib = [Decimal]()
-
-    func fibbonachi (_ n: Int) -> Decimal {
-        if (n < 3) {
-            return 1
+func fibbonachi (numbersInArray: Int) -> [Int] {
+    var arrayOfFib = [Int]()
+    var x1: Int = 1, x2: Int = 1, x: Int
+    
+    for n in 1...numbersInArray {
+        
+        if n < 3 {
+            arrayOfFib.append(1)
         }
         else {
-            var x1: Decimal = 1, x2: Decimal = 1, x: Decimal
-            for _ in 3...n {
-                x = x1 + x2
-                x1 = x2
-                x2 = x
+            x = x1 + x2
+            x1 = x2
+            x2 = x
+            arrayOfFib.append(x2)
             }
-            return x2
         }
-    }
-    for i in 1...fibNumber {
-        arrayOfFib.append(fibbonachi(i))
-    }
     return arrayOfFib
 }
-//print (fibArray(fibNumber: 100))
-
+   
+fibbonachi(numbersInArray: 92)
 
 //MARK:-- TASK 6
 
