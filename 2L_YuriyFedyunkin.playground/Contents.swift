@@ -24,10 +24,8 @@ divisibleByThree(number: 5)
 
 //MARK:-- TASK 3
 
-var array = [Int]()
-for i in 0...99 {
-    array.append(i)
-}
+var array = Array (0...100)
+
 
 //MARK:-- TASK 4
 
